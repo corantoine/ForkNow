@@ -9,6 +9,5 @@ spring:
   jpa:
     show-sql: true
     hibernate:
-      #TODO : repasser ddl-auto en update
       ddl-auto: update
 

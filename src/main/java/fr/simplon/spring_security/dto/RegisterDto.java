@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+// Objet de transfert de données pour l'inscription d'utilisateurs.
 
 @Getter @Setter
 @AllArgsConstructor
