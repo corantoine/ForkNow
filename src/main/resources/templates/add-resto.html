@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter votre restaurant</title>
+</head>
+<body>
+<form th:action="@{/creation-resto/save}" action="/creation-resto/save" method="post" th:object="${shop}">
+    <label for="ShopName">Shop name</label>
+    <input type="text" name="shop_name" id="ShopName" placeholder="Shop name" th:field="*{name}">
+
+    <label for="address">Address</label>
+    <input type="text" name="address" id="address" placeholder=" address" th:field="*{address}">
+
+    <input type="submit" value="add">
+</form>
+</body>
+</html>

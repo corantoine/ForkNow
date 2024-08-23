@@ -1,0 +1,23 @@
+post_created_by_user, 0N [user] User, 0N [comment] Comment
+User: id, username, display_name, mail, password, creation_date [TIMESTAMP]
+user_order, 11 [user] User, 0N [order] Order
+Order: id, total [NUMBER]
+:
+
+Comment: id, content [TEXT]
+user_in_shop, 0N [user] User, 1N [shop] Shop: join_date [TIMESTAMP], role [enum(OWNER, ADMIN, MODERATOR, CUSTOMER) null]
+address_book, 11 [user] User, 0N [address] Address
+order_shipping_address, 11 [order] order, 0N [shipping_address] Address
+order_line, 1N [order] Order, 0N [food] Food: unit_price [NUMBER], quantity [NUMBER], total [NUMBER]
+
+comment_is_for_shop, 11 [comment] Comment, 0N [shop] Shop
+Shop: id, name, creation_date [TIMESTAMP]
+shop_address, 0N [shop] Shop, 11 [address] Address
+Address: id, firstname [null], lastname [null], company_name [null], num [null], type [null], road, city, country
+:
+
+:
+:
+food_in_shop, 0N [shop] Shop, 01 [food] Food
+Food: id, name, creation_date [TIMESTAMP]
+:
