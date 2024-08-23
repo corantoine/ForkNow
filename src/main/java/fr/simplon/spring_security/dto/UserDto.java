@@ -20,6 +20,4 @@ public class UserDto {
 }
 
 //TODO : profil afficher les infos utilisateurs
-//FIXME : modif champs du formulaire (tous = address)
-//TODO : un peu de css
 
