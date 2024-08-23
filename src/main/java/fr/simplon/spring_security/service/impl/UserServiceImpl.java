@@ -27,6 +27,7 @@ public class UserServiceImpl implements UserService {
         this.passwordEncoder = passwordEncoder;
     }
 
+    //Méthode de création/enregistrement d'un utilisateur en bdd
     @Override
     public void saveUser(UserDto user) {
         User userEntity = User.builder()
@@ -54,10 +55,6 @@ public class UserServiceImpl implements UserService {
         return userRepository.findByUsername(username);
     }
 
-    @Override
-    public Optional<User> findByEmail(String email) {
-        return userRepository.findByEmail(email);
-    }
 
     public Optional<User> from(Authentication authentication) {
         if(authentication == null){

@@ -11,6 +11,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
+//Fichier de configuration de la sécurité de l'application (Spring Security)
+
 @Configuration
 @EnableWebSecurity
 public class SpringSecurity {
@@ -29,22 +31,8 @@ public class SpringSecurity {
         return new BCryptPasswordEncoder();
     }
 
-    // @Bean
-    // public InMemoryUserDetailsManager userDetailsManager() {
-    //     return new InMemoryUserDetailsManager(
-    //             User.builder()
-    //                 .username("user")
-    //                 .password(passwordEncoder().encode("pass"))
-    //                 .roles("USER")
-    //                 .build(),
-    //             User.builder()
-    //                 .username("admin")
-    //                 .password(passwordEncoder().encode("pass"))
-    //                 .roles("ADMIN")
-    //                 .build()
-    //     );
-    // }
 
+    //Gestion des permissions d'accès aux pages
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http.authorizeHttpRequests((auth) -> {

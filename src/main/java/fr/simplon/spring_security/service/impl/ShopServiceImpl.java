@@ -19,6 +19,7 @@ public class ShopServiceImpl implements ShopService {
         this.shopRepository = shopRepository;
     }
 
+    //Méthode de création d'un restaurant en base de données
     @Override
     public void saveShop(ShopDto shopMapping) {
         Shop shopEntity = Shop.builder()
@@ -28,6 +29,7 @@ public class ShopServiceImpl implements ShopService {
         shopRepository.save(shopEntity);
     }
 
+    //Méthode de récupération des restaurants
     @Override
     public List<Shop> getAllShops() {
         return shopRepository.findAll();

@@ -22,6 +22,7 @@ public class ShopController {
         this.shopService = shopService;
     }
 
+    //Route pour accéder au formulaire de création d'un restaurant
     @GetMapping("/creation-resto")
     public String addResto(Model model){
         ShopDto shop = new ShopDto();
@@ -29,6 +30,7 @@ public class ShopController {
         return "add-resto";
     }
 
+    // Route pour afficher les différents restaurants
     @GetMapping("/restaurant")
     public String resto(Model model){
         List<Shop> allShops = shopService.getAllShops();
@@ -36,6 +38,7 @@ public class ShopController {
         return "forknow-restaurants-list";
     }
 
+    // Route pour enregistrer un nouveau restaurant dans la base de données
     @PostMapping("/creation-resto/save")
     public String addResto(@Valid @ModelAttribute("shop") ShopDto shopMapping){
         shopService.saveShop(shopMapping);
