@@ -59,8 +59,6 @@ public class User {
     @OneToMany(mappedBy = "users")
     private List<UserInShop> userInShops;
 
-    @OneToMany
-    private List<Order> orders;
 
 
 }
