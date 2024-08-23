@@ -36,6 +36,11 @@ public class Shop {
     @CreationTimestamp
     private LocalDate creationDate;
 
+    private String imageUrl;
+
+    private String description;
+
+
     @OneToMany(mappedBy = "shops")
     private List<UserInShop> userInShops;
 }

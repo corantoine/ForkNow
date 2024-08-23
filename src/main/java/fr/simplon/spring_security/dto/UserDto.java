@@ -19,7 +19,5 @@ public class UserDto {
     private String password;
 }
 
-//TODO : boutons accueil
 //TODO : profil afficher les infos utilisateurs
 //TODO : modification données formulaire de création resto (photo?)
-//TODO :

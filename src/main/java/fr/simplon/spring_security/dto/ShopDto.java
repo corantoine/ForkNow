@@ -13,5 +13,7 @@ import lombok.Setter;
 public class ShopDto {
     private String name;
     private String address;
+    private String imageUrl;
+    private String description;
 
 }

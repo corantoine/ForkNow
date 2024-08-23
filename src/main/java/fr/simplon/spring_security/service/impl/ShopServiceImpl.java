@@ -25,6 +25,8 @@ public class ShopServiceImpl implements ShopService {
         Shop shopEntity = Shop.builder()
                 .name(shopMapping.getName())
                 .address(shopMapping.getAddress())
+                .imageUrl(shopMapping.getImageUrl())
+                .description(shopMapping.getDescription())
                 .build();
         shopRepository.save(shopEntity);
     }

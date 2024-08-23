@@ -150,10 +150,11 @@
 
         <div class="restaurant-grid">
             <div th:each="shop : ${shops}" class="restaurant-card">
-<!--                <img src="/api/placeholder/300/200" alt="Restaurant 3" class="restaurant-image">-->
+                <img th:src="@{${shop.imageUrl}}" alt="Restaurant 3" class="restaurant-image">
                 <div class="restaurant-info">
                     <h2 th:text="${shop.name}" class="restaurant-name">Pizza Paradise</h2>
                     <p th:text="${shop.address}" class="restaurant-cuisine">Italian, Pizza</p>
+                    <p th:text="${shop.description}" class="restaurant-cuisine">Italian, Pizza</p>
                     <div class="restaurant-rating">
                         <span class="star">★★★★☆</span>
                         <span>4.2 (180+ reviews)</span>
