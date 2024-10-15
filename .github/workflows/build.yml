@@ -15,7 +15,7 @@ jobs:
      - get-version
    steps:
      - name: Print version
-       run: echo "${{ needs.get-version.outuputs.version }}"
+       run: echo "${{ needs.get-version.outputs.version }}"
      - name: Setup java
        uses: actions/setup-java@v4
        with:
