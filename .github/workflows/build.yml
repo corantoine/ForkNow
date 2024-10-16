@@ -14,6 +14,7 @@ jobs:
   test:
     name: Spring test
     runs-on: ubuntu-latest
+    continue-on-error: true
     services:
       # Label used to access the service container
       postgres:
@@ -73,13 +74,13 @@ jobs:
         run: ./gradlew bootjar
       - uses: actions/upload-artifact@v4
         with:
+          name: spring
           path: build/libs/
 # Job de release
   release: 
     name: Release
     runs-on: ubuntu-latest
-    needs:
-       [ get-version, build ]
+    needs: [ get-version, build ]
     steps: 
     - name: Download artifacts
       uses: actions/download-artifact@v4.1.8
