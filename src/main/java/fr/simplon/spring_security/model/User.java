@@ -55,6 +55,14 @@ public class User {
     @OneToMany(mappedBy = "users")
     private List<UserInShop> userInShops;
 
+    public User(Long id, @NonNull String username, @NonNull String displayName, @NonNull String email, String password, UserRole role) {
+        this.id = id;
+        this.username = username;
+        this.displayName = displayName;
+        this.email = email;
+        this.password = password;
+        this.role = role;
+    }
 
 
 }

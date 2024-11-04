@@ -7,6 +7,7 @@ COPY . .
 RUN ls -lia && chmod +x ./gradlew \
 && ./gradlew bootjar
 
+
 FROM openjdk:17-slim
 
 WORKDIR /app
